@@ -11,8 +11,6 @@ export async function POST(req) {
   try {
     const { data, folderName } = await req.json();
     
-    // Set the folder name where the file will be uploaded.
-    // If the folder doesn't exist, Cloudinary will create it automatically.
     const folderPath = folderName ? folderName : 'default_folder';
 
     const uploadedResponse = await cloudinary.uploader.upload(data, {

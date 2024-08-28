@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function Home() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewSource, setPreviewSource] = useState('');
-  const folderName = "simple_web_app";
+  const [folderName,setFolderName] = useState("simple_web_app");
   const [uploadStatus, setUploadStatus] = useState('');
   const [fileList, setFileList] = useState([]);
 
@@ -72,6 +72,7 @@ export default function Home() {
       console.error('Error downloading the file:', error);
     }
   };
+  
 
   return (
     <div>
