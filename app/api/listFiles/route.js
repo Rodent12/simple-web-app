@@ -14,7 +14,7 @@ export async function GET(req) {
 
     const resources = await cloudinary.api.resources({
       type: 'upload',
-      prefix: folderName,  // Fetch files from the specific folder
+      prefix: folderName,  
     });
 
     return NextResponse.json({ files: resources.resources });
